@@ -17,20 +17,30 @@ var listaStudenti = [
 {
   "nome": "Mirko",
   "cognome": "Rinelli",
+  "età": 31
 },
 {
   "nome": "Mario",
   "cognome": "Rossi",
+  "età": 25
+
 },
 {
   "nome": "Luigia",
   "cognome": "Bianchi",
+  "età": 65
 },
 ];
 
+//Dare la possibilità all’utente attraverso 3 prompt di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
+var nuovoStudente = {
+  "nome": prompt("Inserisci il nome"),
+  "cognome": prompt("Inserisci il cognome"),
+  "età": Number(prompt("Inserisci l'età"))
+}
+listaStudenti.push(nuovoStudente);
+
 for (var key in listaStudenti) {
   console.log( listaStudenti[key].nome, listaStudenti[key].cognome);
-  document.getElementById("student_list").innerHTML += listaStudenti[key].nome + " " + listaStudenti[key].cognome + "<br>";
+  document.getElementById("student_list").innerHTML += "NOME: " + listaStudenti[key].nome + " " + "COGNOME: " + listaStudenti[key].cognome + "<br>";
 }
-
-//Dare la possibilità all’utente attraverso 3 prompt di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
